@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="kelvin" class="org.devkiu.spring.core.xmlreference.Student" >
+        <constructor-arg name="studentId" value="SCT221" />
+        <constructor-arg name="firstName" value="Kelvin" />
+        <constructor-arg name="lastName" value="Ndisi" />
+        <constructor-arg name="department" ref="itDepartment" />
+    </bean>
+    <bean id="itDepartment" class="org.devkiu.spring.core.xmlreference.Department">
+        <constructor-arg name="departmentId" value="1" />
+        <constructor-arg name="departmentName" value="Information Technology" />
+    </bean>
+</beans>
