@@ -1,7 +1,9 @@
 # idea IDE config files
 .idea
 Spring Core.iml
+
 # Compiled class file
+target/
 *.class
 
 # Log file
