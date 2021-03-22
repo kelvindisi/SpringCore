@@ -12,5 +12,8 @@ __Since it's Maven project, configuration is on pom.xml fil__
 1. Constructor Annotation Metadata configuration(__annotationconfi__)
 1. Setter based XML metadata configuration(__setterbased__)
 1. Creating XML reference metadata (__xmlreference__)
+1. BeanCurrentInCreationException (__currentInCreation__)
+1. import of configuration file (__bean.separation__)
+1. Creating a inner bean (__bean.inner__)
 
 It's written in pure Java and using Spring Release version 5.1.8
