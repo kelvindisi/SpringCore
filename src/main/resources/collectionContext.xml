@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="ndisi" class="org.devkiu.spring.core.bean.collections.Student">
+        <constructor-arg name="fullName" value="Kelvin Ndisi" />
+        <constructor-arg name="units">
+            <list value-type="org.devkiu.spring.core.bean.collections.Unit">
+                <bean id="dataStructures" class="org.devkiu.spring.core.bean.collections.Unit">
+                    <constructor-arg name="unitCode" value="BIT-3455" />
+                    <constructor-arg name="unitName" value="Data Structures" />
+                </bean>
+                <bean id="cloudComputing" class="org.devkiu.spring.core.bean.collections.Unit">
+                    <constructor-arg name="unitCode" value="BIT-4552" />
+                    <constructor-arg name="unitName" value="Cloud Computing" />
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
