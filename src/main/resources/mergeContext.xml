@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <bean id="person" class="org.devkiu.spring.core.bean.collections.merge.Person">
+       <property name="addresses">
+           <props>
+               <prop key="juja">G-Wilmar apartment room B13</prop>
+               <prop key="rongai">Gataka ACK room 23</prop>
+           </props>
+       </property>
+   </bean>
+    <bean id="staff" parent="person" class="org.devkiu.spring.core.bean.collections.merge.Staff">
+        <property name="addresses">
+            <props merge="true">
+                <prop key="machakos">Muthine Estate aprt 2</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
