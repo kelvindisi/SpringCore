@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="kq" class="org.devkiu.spring.core.bean.dependson.Flight">
+        <constructor-arg name="flightName" value="Kenya Airways" />
+    </bean>
+    <bean id="prisoner" depends-on="kq" class="org.devkiu.spring.core.bean.dependson.Passenger">
+        <constructor-arg name="fullName" value="Brian Mugambi" />
+        <constructor-arg name="flight" ref="kq" />
+    </bean>
+</beans>
